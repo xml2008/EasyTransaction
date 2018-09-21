@@ -4,19 +4,23 @@ spring:
   datasource: # order service datasource config
     url: jdbc:mysql://localhost:3306/order?characterEncoding=UTF-8&useSSL=false
     username: root
-    password: 123456
+    password:
     driver-class-name: com.mysql.jdbc.Driver
 
 server: 
-  port: 8080
+  port: 8082
 
 # RIBBON用，也可以直接开启Eureka
 order-service:
   ribbon:
-    listOfServers: localhost:8080
+    eureka:
+      enabled: false
+    listOfServers: localhost:8082
 
 wallet-service:
   ribbon:
+    eureka:
+      enabled: false
     listOfServers: localhost:8081
 
 easytrans:
@@ -39,7 +43,7 @@ easytrans:
         driverClassName: com.mysql.jdbc.Driver
         url: jdbc:mysql://localhost:3306/order_translog?characterEncoding=UTF-8&useSSL=false
         username: root
-        password: 123456
+        password:
 
 
 

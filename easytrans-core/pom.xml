@@ -1,38 +1,40 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <name>EasyTransaction core</name>
-  
-  <artifactId>easytrans-core</artifactId>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<name>EasyTransaction core</name>
 
-  	<parent>
-		  <groupId>com.yiqiniu.easytrans</groupId>
-		  <artifactId>easytrans</artifactId>
-		  <version>${revision}</version>
-		  <relativePath>../pom.xml</relativePath>
+	<artifactId>easytrans-core</artifactId>
+
+	<parent>
+		<groupId>com.yiqiniu.easytrans</groupId>
+		<artifactId>easytrans</artifactId>
+		<version>${revision}</version>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
-  
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
-<dependencies>
+	<dependencies>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-autoconfigure</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
 		</dependency>
-		
-		
+
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
@@ -52,11 +54,8 @@
 		</dependency>
 
 		<!-- For Interface Concrete implements -->
-<!-- 		<dependency>
-			<groupId>com.yiqiniu.easytrans</groupId>
-			<artifactId>easytrans-log-kafka-starter</artifactId>
-			<version>${easytrans.version}</version>
-		</dependency> -->
+		<!-- <dependency> <groupId>com.yiqiniu.easytrans</groupId> <artifactId>easytrans-log-kafka-starter</artifactId> 
+			<version>${easytrans.version}</version> </dependency> -->
 
 
 
@@ -65,11 +64,28 @@
 			<artifactId>curator-recipes</artifactId>
 		</dependency>
 
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.apache.zookeeper</groupId> -->
+<!-- 			<artifactId>zookeeper</artifactId> -->
+<!-- 			<version>3.5.3-beta</version> -->
+<!-- 			<exclusions> -->
+<!-- 				<exclustion> -->
+<!-- 					<groupId>org.slf4j</groupId> -->
+<!-- 					<artifactId>slf4j-log4j12</artifactId> -->
+<!-- 				</exclustion> -->
+<!-- 				<exclustion> -->
+<!-- 					<groupId>log4j</groupId> -->
+<!-- 					<artifactId>log4j</artifactId> -->
+<!-- 				</exclustion> -->
+<!-- 			</exclusions> -->
+<!-- 		</dependency> -->
+
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
+			<version>26.0-jre</version>
 		</dependency>
 
-</dependencies>
-  
+	</dependencies>
+
 </project>

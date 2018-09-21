@@ -22,7 +22,7 @@ wallet-service:
 easytrans:
   master:
     zk:
-      zooKeeperUrl: localhost:2281
+      zooKeeperUrl: localhost:2181
   stringcodec:
     zk:
       zooKeeperUrl: ${easytrans.master.zk.zooKeeperUrl}
